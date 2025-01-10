@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="changeme" default="all" basedir=".">
+    
+    <target name="compile">
+    <javac srcdir="src" destdir="build" />
+</target>
+
+<target name="report" depends="compile">
+    <java classname="net.sf.jasperreports.engine.JasperFillManager" fork="true">
+        <classpath>
+            <pathelement location="lib/" /> 
+            <pathelement location="build/" /> 
+        </classpath>
+        <arg value="-s"/> 
+        <arg value="src/your_report.jrxml"/> 
+        <arg value="output/your_report.pdf"/> 
+    </java>
+</target>
+
+<target name="clean">
+    <delete dir="build" />
+    <delete dir="output" />
+</target>
+
+<target name="all" depends="clean, compile, report" />
+    <target name="all">
+        <!-- TODO define script. See Help menu or http://ant.apache.org/ -->
+    </target>
+</project>
