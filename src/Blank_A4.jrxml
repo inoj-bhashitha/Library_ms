@@ -1,0 +1,152 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Blank_A4" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c936dcb0-5fe1-4b58-9caf-7afde070916b">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="issue_book_report"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<dataset name="Dataset1" uuid="ff202f0d-ce78-47f4-8987-10f6ff4636f3">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+		<query language="SQL"><![CDATA[SELECT issue_book_details.id,book_details.book_name,student_details.student_name,issue_book_details.issue_date,issue_book_details.due_date,issue_book_details.status 
+
+FROM issue_book_details inner join book_details inner join student_details 
+
+on book_details.book_name = issue_book_details.book_name = issue_book_details.student_name;]]></query>
+		<field name="id" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id"/>
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="issue_book_details"/>
+		</field>
+		<field name="book_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="book_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="book_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="book_details"/>
+		</field>
+		<field name="student_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="student_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="student_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="student_details"/>
+		</field>
+		<field name="issue_date" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.name" value="issue_date"/>
+			<property name="com.jaspersoft.studio.field.label" value="issue_date"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="issue_book_details"/>
+		</field>
+		<field name="due_date" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.name" value="due_date"/>
+			<property name="com.jaspersoft.studio.field.label" value="due_date"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="issue_book_details"/>
+		</field>
+		<field name="status" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="status"/>
+			<property name="com.jaspersoft.studio.field.label" value="status"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="issue_book_details"/>
+		</field>
+	</dataset>
+	<query language="SQL"><![CDATA[SELECT issue_book_details.id,book_details.book_name,student_details.student_name,issue_book_details.issue_date,issue_book_details.due_date,issue_book_details.status FROM issue_book_details inner join book_details inner join student_details on book_details.book_name = issue_book_details.book_name = issue_book_details.student_name;]]></query>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="issue_book_details"/>
+	</field>
+	<field name="book_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="book_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="book_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="book_details"/>
+	</field>
+	<field name="student_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="student_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="student_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student_details"/>
+	</field>
+	<field name="issue_date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="issue_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="issue_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="issue_book_details"/>
+	</field>
+	<field name="due_date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="due_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="due_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="issue_book_details"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="issue_book_details"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="f216934d-e648-423f-a5ab-0d6859cf4c6c" x="50" y="19" width="450" height="40" fontName="Bahnschrift" fontSize="31.0" hTextAlign="Center">
+			<text><![CDATA[Issued Book Report]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="8afcd763-7976-404b-8f97-b9422a15ebeb" x="1" y="20" width="30" height="26" fontSize="18.0">
+			<text><![CDATA[ID]]></text>
+		</element>
+		<element kind="staticText" uuid="76d6e01c-0d09-4a84-b76b-048ef4ffef5b" x="40" y="20" width="100" height="26" fontSize="18.0">
+			<text><![CDATA[Book Name]]></text>
+		</element>
+		<element kind="staticText" uuid="5b8356f1-c180-498e-8d2e-6e7c4ab2df80" x="160" y="20" width="120" height="26" fontSize="18.0">
+			<text><![CDATA[Student Name]]></text>
+		</element>
+		<element kind="staticText" uuid="042e4f78-30e8-467c-b8e9-656850d4ad90" x="290" y="20" width="100" height="26" fontSize="18.0">
+			<text><![CDATA[Issue Date]]></text>
+		</element>
+		<element kind="staticText" uuid="14f981d7-ebfe-46d2-a4f9-c289528a3d9a" x="410" y="20" width="80" height="26" fontSize="18.0">
+			<text><![CDATA[Due Date]]></text>
+		</element>
+		<element kind="staticText" uuid="c4a00f13-6a07-4426-9520-20f45d7a6395" x="500" y="20" width="55" height="26" fontSize="18.0">
+			<text><![CDATA[Status]]></text>
+		</element>
+		<element kind="line" uuid="f072fcaa-7f83-4daf-8ab4-51639619191b" x="-22" y="56" width="595" height="2"/>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<element kind="textField" uuid="14802e36-3b01-4f21-bae9-621ad70f29f6" x="-4" y="20" width="40" height="22" fontSize="14.0" hTextAlign="Center">
+				<expression><![CDATA[$F{id}]]></expression>
+			</element>
+			<element kind="textField" uuid="a31311bd-99c9-4793-ab86-6ef4995abb4a" x="50" y="20" width="100" height="20" fontSize="14.0" hTextAlign="Center">
+				<expression><![CDATA[$F{book_name}]]></expression>
+			</element>
+			<element kind="textField" uuid="4d0c9c31-16eb-4726-9c83-108133c89c55" x="150" y="20" width="120" height="20" fontSize="14.0" hTextAlign="Center">
+				<expression><![CDATA[$F{student_name}]]></expression>
+			</element>
+			<element kind="textField" uuid="6da7112f-ebf9-47f9-a178-70422a7e30a8" x="280" y="20" width="100" height="20" fontSize="14.0" hTextAlign="Left">
+				<expression><![CDATA[$F{issue_date}]]></expression>
+			</element>
+			<element kind="textField" uuid="5b3f77ee-bd75-4136-bf05-5d43154b2c57" x="390" y="22" width="90" height="20" fontSize="14.0" hTextAlign="Left">
+				<expression><![CDATA[$F{due_date}]]></expression>
+			</element>
+			<element kind="textField" uuid="50d542a0-b894-4592-a02d-ef244766a031" x="490" y="22" width="70" height="20" fontSize="14.0" hTextAlign="Center">
+				<expression><![CDATA[$F{status}]]></expression>
+			</element>
+		</band>
+	</detail>
+</jasperReport>

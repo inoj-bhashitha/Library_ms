@@ -1566,10 +1566,25 @@ public class signUp2 extends javax.swing.JFrame {
 
         rSMaterialButtonCircle1.setBackground(new java.awt.Color(51, 0, 255));
         rSMaterialButtonCircle1.setText("LOGIN");
+        rSMaterialButtonCircle1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rSMaterialButtonCircle1MouseClicked(evt);
+            }
+        });
+        rSMaterialButtonCircle1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSMaterialButtonCircle1ActionPerformed(evt);
+            }
+        });
         jPanel2.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 690, 310, 60));
 
         rSMaterialButtonCircle2.setBackground(new java.awt.Color(51, 51, 51));
         rSMaterialButtonCircle2.setText("SIGNUP");
+        rSMaterialButtonCircle2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rSMaterialButtonCircle2MouseClicked(evt);
+            }
+        });
         rSMaterialButtonCircle2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonCircle2ActionPerformed(evt);
@@ -1600,6 +1615,19 @@ public class signUp2 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"user already exist");
         }
     }//GEN-LAST:event_txt_usernameFocusLost
+
+    private void rSMaterialButtonCircle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rSMaterialButtonCircle1ActionPerformed
+
+    private void rSMaterialButtonCircle2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rSMaterialButtonCircle2MouseClicked
+
+    private void rSMaterialButtonCircle1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle1MouseClicked
+        Login login = new Login();
+        login.setVisible(true);
+    }//GEN-LAST:event_rSMaterialButtonCircle1MouseClicked
 
     /**
      * @param args the command line arguments

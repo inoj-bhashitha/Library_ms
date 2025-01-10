@@ -220,7 +220,7 @@ public class ViewAllRecord extends javax.swing.JFrame {
            
            Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library_ms","root","");
-        String reportPath = "C:\\Users\\maini\\JaspersoftWorkspace\\MyReports\\re.jrxml";
+        String reportPath = "D:\\LibraryManagementSystem\\src\\Blank_A4.jrxml";
         JasperReport jr = JasperCompileManager.compileReport(reportPath);
         JasperPrint jp = JasperFillManager.fillReport(jr,null,con);
         JasperViewer .viewReport(jp);
